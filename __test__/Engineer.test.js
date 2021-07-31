@@ -15,4 +15,17 @@ describe('Engineer', () => {
             expect(result).toHaveProperty('github');
         });
     });
+
+    describe('getGithub', () => {
+        it('should return the github for the engineer', () => {
+            const github = 'dave25';
+            const result = new Engineer(
+                'Dave',
+                '12345',
+                'dave@gmail.com',
+                github
+            );
+            expect(result.getGithub()).toEqual(github);
+        })
+    })
 });
