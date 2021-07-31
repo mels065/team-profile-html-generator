@@ -25,4 +25,12 @@ describe('Employee', () => {
             expect(result.getId()).toEqual(id);
         });
     });
+
+    describe('getEmail', () => {
+        it('should return the email of the employee', () => {
+            const email = 'dave@gmail.com';
+            const result = new Employee('Dave', '12345', email);
+            expect(result.getEmail()).toEqual(email);
+        });
+    });
 });
