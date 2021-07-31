@@ -27,5 +27,27 @@ describe('Intern', () => {
             );
             expect(result.getSchool()).toEqual(school);
         });
-    })
+    });
+
+    describe('getRole', () => {
+        it('should not return `Employee`', () => {
+            const result = new Intern(
+                'Dave',
+                '12345',
+                'dave@gmail.com',
+                'School of Rock'
+            );
+            expect(result.getRole()).not.toEqual('Employee');
+        });
+
+        it('should return `Intern`', () => {
+            const result = new Intern(
+                'Dave',
+                '12345',
+                'dave@gmail.com',
+                'School of Rock'
+            );
+            expect(result.getRole()).toEqual('Intern');
+        });
+    });
 });
