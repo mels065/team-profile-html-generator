@@ -1,0 +1,25 @@
+{
+  "name": "team-profile-html-generator",
+  "version": "1.0.0",
+  "description": "A command line application for generating an HTML file with information on a team of software engineering employees.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mels065/team-profile-html-generator.git"
+  },
+  "author": "Brandon Mellus",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mels065/team-profile-html-generator/issues"
+  },
+  "homepage": "https://github.com/mels065/team-profile-html-generator#readme",
+  "devDependencies": {
+    "jest": "^27.0.6"
+  },
+  "dependencies": {
+    "inquirer": "^8.1.2"
+  }
+}
