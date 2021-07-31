@@ -16,5 +16,13 @@ describe('Employee', () => {
             const result = new Employee(name, '12345', 'dave@gmail.com');
             expect(result.getName()).toEqual(name);
         });
-    })
+    });
+
+    describe('getId', () => {
+        it('should return the id of the employee', () => {
+            const id = '12345';
+            const result = new Employee('Dave', id, 'dave@gmail.com');
+            expect(result.getId()).toEqual(id);
+        });
+    });
 });
