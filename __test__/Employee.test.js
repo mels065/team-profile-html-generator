@@ -33,4 +33,11 @@ describe('Employee', () => {
             expect(result.getEmail()).toEqual(email);
         });
     });
+
+    describe('getRole', () => {
+        it('should return the string `Employee`', () => {
+            const result = new Employee('Dave', '12345', 'dave@gmail.com');
+            expect(result.getRole()).toEqual('Employee');
+        })
+    })
 });
