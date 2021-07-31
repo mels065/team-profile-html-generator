@@ -27,5 +27,27 @@ describe('Engineer', () => {
             );
             expect(result.getGithub()).toEqual(github);
         })
+    });
+
+    describe('getRole', () => {
+        it('should not return `Employee`', () => {
+            const result = new Engineer(
+                'Dave',
+                '12345',
+                'dave@gmail.com',
+                'dave25'
+            );
+            expect(result.getRole()).not.toEqual('Employee');
+        });
+
+        it('should return return `Engineer`', () => {
+            const result = new Engineer(
+                'Dave',
+                '12345',
+                'dave@gmail.com',
+                'dave25'
+            );
+            expect(result.getRole()).toEqual('Engineer');
+        })
     })
 });
