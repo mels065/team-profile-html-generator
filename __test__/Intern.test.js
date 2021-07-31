@@ -15,4 +15,17 @@ describe('Intern', () => {
             expect(result).toHaveProperty('school');
         });
     });
+
+    describe('getSchool', () => {
+        it('should return the name of the school the intern attends', () => {
+            const school = 'School of Rock';
+            const result = new Intern(
+                'Dave',
+                '12345',
+                'dave@gmail.com',
+                school
+            );
+            expect(result.getSchool()).toEqual(school);
+        });
+    })
 });
