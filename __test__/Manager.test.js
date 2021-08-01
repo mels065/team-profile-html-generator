@@ -16,6 +16,19 @@ describe('Manager', () => {
         })
     });
 
+    describe('getOfficeNumber', () => {
+        it('should return the office number of the manager', () => {
+            const officeNumber = "1A";
+            const result = new Manager(
+                'Dave',
+                '12345',
+                'dave@gmail.com',
+                officeNumber
+            );
+            expect(result.getOfficeNumber()).toEqual(officeNumber);
+        });
+    });
+
     describe('getRole', () => {
         it('should not return `Employee`', () => {
             const result = new Manager(
@@ -36,5 +49,5 @@ describe('Manager', () => {
             );
             expect(result.getRole()).toEqual('Manager');
         })
-    })
+    });
 });
