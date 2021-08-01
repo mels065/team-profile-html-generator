@@ -4,9 +4,68 @@ body {
     font-family: 'Open Sans', sans-serif;
 }
 
+a {
+    color: rgb(57, 122, 241);
+    text-decoration: none;
+}
+
+a:hover {
+    color: #333;
+}
+
 #header {
     background-color: rgb(207, 15, 15);
     color: white;
     padding: 20px;
     text-align: center;
+}
+
+#team {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 30px;
+    justify-content: space-around;
+}
+
+.employee-card {
+    box-shadow: 10px 5px 10px #333;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+    height: 500px;
+    width: 400px;
+}
+
+.employee-card header {
+    background-color: rgb(38, 35, 199);
+    color: white;
+    text-align: center;
+    padding-bottom: 30px;
+    width: 100%;
+}
+
+.employee-card header h2 {
+    font-size: 2rem;
+}
+
+.employee-card .content {
+    background-color: rgb(243, 243, 243);
+    height: 100%;
+    width: 100%;
+}
+
+.employee-card .details {
+    list-style-type: none;
+    padding-left: 0;
+    width: 100%;
+}
+
+.employee-card .detail-item {
+    background-color: white;
+    border: 1px solid black;
+    box-shadow: 2px 2px 5px #333;
+    font-size: 1.2rem;
+    margin: 40px 10px;
+    padding: 15px;
 }

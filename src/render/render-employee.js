@@ -8,13 +8,13 @@ function renderEmployee(employee) {
     <div class="employee-card">
         <header>
             <h2 class="name">${name}</h2>
-            <p class="role"><i class="fa ${renderIcon(role)}"></i>${role}</p>
+            <p class="role"><i class="fa ${renderIcon(role)}"></i> ${role}</p>
         </header>
         <section class="content">
-            <ul>
-                <li>ID: ${id}</li>
-                <li>Email: <a href="mailto:${email}">${email}</a></li>
-                <li>${renderUniqueProperty(employee, role)}</li>
+            <ul class="details">
+                <li class="detail-item">ID: ${id}</li>
+                <li class="detail-item">Email: <a href="mailto:${email}">${email}</a></li>
+                <li class="detail-item">${renderUniqueProperty(employee, role)}</li>
             </ul>
         </section>
     </div>
