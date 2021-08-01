@@ -1,6 +1,6 @@
 const inquirer = require('inquirer');
 
-const validateEmail = require('../utils/validate-email');
+const { validateEmail, validateName, validateId } = require('../utils');
 
 const Manager = require('../../lib/Manager');
 
@@ -9,11 +9,13 @@ async function getManager() {
         const managerData = await inquirer.prompt([
             {
                 name: "name",
-                message: "What is the name of the manager?"
+                message: "What is the name of the manager?",
+                validate: validateName
             },
             {
                 name: "id",
-                message: "What is the manager's employee id?"
+                message: "What is the manager's employee id?",
+                validate: validateId
             },
             {
                 name: "email",
@@ -22,7 +24,8 @@ async function getManager() {
             },
             {
                 name: "officeNumber",
-                message: "What is the office number of the manager?"
+                message: "What is the office number of the manager?",
+                validate: validateId
             }
         ]);
     

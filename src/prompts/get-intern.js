@@ -1,6 +1,6 @@
 const inquirer = require('inquirer');
 
-const validateEmail = require('../utils/validate-email');
+const { validateEmail, validateName, validateId } = require('../utils');
 
 const Intern = require('../../lib/Intern');
 
@@ -8,11 +8,13 @@ async function getIntern() {
     const internData = await inquirer.prompt([
         {
             name: "name",
-            message: "What is the intern's name?"
+            message: "What is the intern's name?",
+            validate: validateName
         },
         {
             name: "id",
-            message: "What is the employee id for the intern?"
+            message: "What is the employee id for the intern?",
+            validate: validateId
         },
         {
             name: "email",
