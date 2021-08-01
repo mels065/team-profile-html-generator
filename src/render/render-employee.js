@@ -44,7 +44,7 @@ function renderUniqueProperty(employee, role) {
             return `Office Number: ${employee.getOfficeNumber()}`
         }
         case "Engineer": {
-            return `GitHub: <a href="https://github.com/${employee.getGithub()}">${employee.getGithub()}</a>`
+            return `GitHub: <a target="_blank" href="https://github.com/${employee.getGithub()}">${employee.getGithub()}</a>`
         }
         case "Intern": {
             return `School: ${employee.getSchool()}`
