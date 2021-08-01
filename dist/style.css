@@ -1,0 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+#header {
+    background-color: rgb(53, 51, 190);
+    color: white;
+    padding: 20px;
+    text-align: center;
+}

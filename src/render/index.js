@@ -9,10 +9,11 @@ function renderData(data) {
     <html>
         <head>
             <title>Team Profile</title>
+            <link href="./reset.css" rel="stylesheet" type="text/css" />
             <link href="./style.css" rel="stylesheet" type="text/css" />
         </head>
         <body>
-            <header>
+            <header id="header">
                 <h1>My Team</h1>
             </header>
             <main>
