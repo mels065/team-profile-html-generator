@@ -14,6 +14,4 @@ async function getPrompts() {
     }
 }
 
-(async () => console.log(await getPrompts()))()
-
 module.exports = getPrompts;

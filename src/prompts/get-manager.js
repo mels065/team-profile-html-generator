@@ -24,11 +24,17 @@ async function getManager() {
             }
         ]);
     
+        const {
+            name,
+            id,
+            email,
+            officeNumber
+        } = managerData;
         return new Manager(
-            managerData.name,
-            managerData.id,
-            managerData.email,
-            managerData.officeNumber
+            name,
+            id,
+            email,
+            officeNumber
         )
     } catch(err) {
         throw err;
