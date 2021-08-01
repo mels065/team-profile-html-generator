@@ -1,8 +1,11 @@
+const fs = require('fs');
+const path = require('path');
+
 const renderEmployee = require("./render-employee");
 
 function renderData(data) {
     const { manager, engineers, interns } = data;
-    return `
+    const html = `
     <html>
         <head>
             <title>Team Profile</title>
@@ -22,6 +25,10 @@ function renderData(data) {
         </body>
     </html>
     `
+
+    fs.writeFile(path.join(__dirname, '../../dist/index.html'), html, (err) => {
+        err ? console.error(err) : console.log("File has been created");
+    })
 }
 
 module.exports = renderData;
