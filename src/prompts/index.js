@@ -7,7 +7,7 @@ async function getPrompts() {
     try {
         return {
             manager: (await getManager()),
-            employees: (await getEmployees())
+            ...(await getEmployees())
         }
     } catch(err) {
         throw err;

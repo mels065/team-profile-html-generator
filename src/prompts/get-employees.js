@@ -1,9 +1,13 @@
 const inquirer = require('inquirer');
 
 const getEngineer = require('./get-engineer');
+const getIntern = require('./get-intern');
 
 async function getEmployees() {
-    const employees = [];
+    const employees = {
+        engineers: [],
+        interns: [],
+    };
     while (await willAddEmployee()) {
         const { employeeType } = await inquirer.prompt([
             {
@@ -16,11 +20,11 @@ async function getEmployees() {
 
         switch(employeeType) {
             case "Engineer": {
-                employees.push(await getEngineer());
+                employees.engineers.push(await getEngineer());
                 break;
             }
             case "Intern": {
-                employees.push("Intern");
+                employees.interns.push(await getIntern());
                 break;
             }
             default: {
