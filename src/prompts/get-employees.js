@@ -1,5 +1,7 @@
 const inquirer = require('inquirer');
 
+const getEngineer = require('./get-engineer');
+
 async function getEmployees() {
     const employees = [];
     while (await willAddEmployee()) {
@@ -14,7 +16,7 @@ async function getEmployees() {
 
         switch(employeeType) {
             case "Engineer": {
-                employees.push("Engineer");
+                employees.push(await getEngineer());
                 break;
             }
             case "Intern": {

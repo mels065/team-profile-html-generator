@@ -1,5 +1,7 @@
 const inquirer = require('inquirer');
 
+const validateEmail = require('../utils/validate-email');
+
 const Manager = require('../../lib/Manager');
 
 async function getManager() {
@@ -16,7 +18,7 @@ async function getManager() {
             {
                 name: "email",
                 message: "What is the manager's email?",
-                validate: input => /\w+@\w+\.(com|edu|gov|org|net|io)/.test(input)
+                validate: validateEmail
             },
             {
                 name: "officeNumber",
