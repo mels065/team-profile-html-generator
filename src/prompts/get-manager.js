@@ -1,6 +1,6 @@
 const inquirer = require('inquirer');
 
-const Manager = require('../lib/Manager');
+const Manager = require('../../lib/Manager');
 
 async function getManager() {
     try {
