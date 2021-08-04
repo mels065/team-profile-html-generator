@@ -1,5 +1,5 @@
-const getPrompts = require('./src/prompts');
-const renderData = require('./src/render');
+const getPrompts = require('./src/prompts/get-prompts');
+const renderData = require('./src/render/render-data');
 
 async function init() {
     try {
