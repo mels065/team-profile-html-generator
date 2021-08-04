@@ -3,7 +3,7 @@ const path = require('path');
 
 const renderEmployee = require("./render-employee");
 
-function renderData(data) {
+async function renderData(data) {
     const { manager, engineers, interns } = data;
     const html = `
     <html>
@@ -27,10 +27,20 @@ function renderData(data) {
         </body>
     </html>
     `
-
-    fs.writeFile(path.join(__dirname, '../../dist/index.html'), html, (err) => {
-        err ? console.error(err) : console.log("File has been created");
-    })
+    try {
+        return await new Promise((resolve, reject) => {
+            fs.writeFile(path.join(__dirname, '../../dist/index.html'), html, (err) => {
+                if (err) {
+                    reject(err);
+                } else {
+                    console.log("File has been created");
+                    resolve();
+                }
+            });
+        });
+    } catch (err) {
+        console.error(err);
+    }
 }
 
 module.exports = renderData;
